@@ -1,0 +1,12 @@
+# Netlify конфигурациясы — КыргызЖардам CRM
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback — React Router route'тору (/people, /aid, ж.б.)
+# баракты түз ачканда же жаңыртканда 404 бербеши үчүн
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
